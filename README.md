@@ -2,8 +2,7 @@
 
 - 🔭 Eu estou trabalhando atualmente como freelancer/ Working as a Freelancer.
 - 🌱 Atualmente Aprendendo Java e C/ Learning Java and C.
-
--->
+- 🛸 Você tambêm pode me contatar por essas redes:/ You can also reach me at:
 <div> 
 
   <a href = "mailto:gabriel.camargoadv@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
