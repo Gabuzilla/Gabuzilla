@@ -1,5 +1,6 @@
-### Olá me chamo Gabriel Camargo e sou acadêmico de Direito e Análise e Desenvolvimento de Sistemas/ Hello, My name is Gabriel Camargo and i'm graduating in Law School(Uniritter) and Software Development(LaSalle). 👋
+### Olá me chamo Gabriel Camargo 👋
 
+- 👨‍🎓 acadêmico de Direito e Análise e Desenvolvimento de Sistemas/ Graduating in Law School(Uniritter) and Software Development(LaSalle).
 - 🔭 Eu estou trabalhando atualmente como freelancer/ Working as a Freelancer.
 - 🌱 Atualmente Aprendendo Java e C/ Learning Java and C.
 - 🛸 Você tambêm pode me contatar por essas redes:/ You can also reach me at:
