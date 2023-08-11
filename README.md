@@ -8,20 +8,6 @@ I'm a Brazilian developer with a passion for both software development and law. 
 ## 🚀 Current Endeavors
 I'm currently working as a freelance developer and I'm open to exciting projects. If you have something interesting in mind, let's collaborate!
 
-## 📫 Get in Touch
-<p align="start">
-  You can reach me through these channels:
-  <div> 
-
-  <a href="mailto:gabriel.camargoadv@gmail.com">
-    <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-  </a>
-  <a href="https://www.linkedin.com/in/gabriel-camargo-adv/">
-    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-  </a> 
- 
-</div>
-</p>
 
 ## 🛠️ Skills and Technologies
 ### Development Languages
@@ -36,7 +22,18 @@ I'm proficient in a variety of programming languages:
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" height="32px" alt="Kotlin" />
 </p>
 
-## 💬 Let's Connect
-<p align="center">
-  I'm always excited to connect with fellow developers, collaborators, and anyone interested in the tech or legal space. Feel free to reach out via email or LinkedIn. Let's create something amazing together! 👯‍♂️
+
+## 📫 Get in Touch
+<p align="start">
+  You can reach me through these channels:
+  <div> 
+
+  <a href="mailto:gabriel.camargoadv@gmail.com">
+    <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+  </a>
+  <a href="https://www.linkedin.com/in/gabriel-camargo-adv/">
+    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a> 
+ 
+</div>
 </p>
