@@ -1,4 +1,4 @@
-# Hello, World! I'm Gabriel Camargo 🌟
+# Hello, World! My name is Gabriel Camargo!
 
 ## About Me
 I'm a Brazilian developer with a passion for both software development and law. Currently, I'm pursuing degrees in both fields:
