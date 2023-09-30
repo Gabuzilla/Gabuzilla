@@ -6,21 +6,22 @@ I'm a Brazilian developer with a passion for both software development and law. 
 - Software Development at La Salle - RS
 
 ## 🚀 Current Endeavors
-I'm currently working as a freelance developer and I'm open to exciting projects. If you have something interesting in mind, let's collaborate!
+I'm currently working as a developer at V4 Company!
 
 
-## 🛠️ Skills and Technologies
-### Development Languages
-I'm proficient in a variety of programming languages:
-
+## 🛠️ Development Languages
+### I have experience coding with:
 <p align="start">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" height="32px" alt="HTML5" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" height="32px" alt="CSS3" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="32px" alt="JavaScript" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="32px" alt="TypeScript" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="32px" alt="react logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" height="32px" alt="nestjs logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" height="32px" alt="Java" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" height="32px" alt="Kotlin" />
 </p>
+
 
 
 ## 📫 Get in Touch
