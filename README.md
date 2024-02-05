@@ -6,7 +6,7 @@ I'm a Brazilian developer with a passion for both software development and law. 
 - Software Development at La Salle - RS
 
 ## 🚀 Current Endeavors
-I'm currently working as a developer at V4 Company!
+I'm currently working as a developer at Creare!
 
 
 ## 🛠️ Development Languages
