@@ -1,9 +1,8 @@
 # Hello, World! My name is Gabriel Camargo!
 
 ## About Me
-I'm a Brazilian developer with a passion for both software development and law. Currently, I'm pursuing degrees in both fields:
-- Law at Uniritter - RS
-- Software Development at La Salle - RS
+I'm a Brazilian developer with a passion for both software development and law. 
+I have a degree in Analysis and Systems Development, and I'm currently pursuing postgraduate studies in Full Stack Development and Artificial Intelligence at Rocketseat.
 
 ## 🚀 Current Endeavors
 I'm currently working as a developer at Creare!
