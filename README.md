@@ -39,7 +39,7 @@ I'm currently working as a developer at Creare!
 
 <!-- WOW-STATUS-START -->
 
-## 🎮 currently playing wow
+## 🎮 Currently playing wow
   <div align="center">
   <img src="https://render.worldofwarcraft.com/us/character/azralon/2/201204738-main-raw.png" alt="calltrucko" width="650px" />
   <table >
