@@ -74,7 +74,7 @@ function updateReadme(characterData) {
   }
 
   const characterMarkdown = `
-## 🎮 currently playing wow
+## 🎮 Currently playing wow
   <div align="center">
   <img src="${characterData.imageUrl}" alt="${CHAR_NAME}" width="650px" />
   <table >
