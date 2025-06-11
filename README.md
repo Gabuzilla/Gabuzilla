@@ -1,42 +1,113 @@
-# Hello, World! My name is Gabriel Camargo!
+require("dotenv").config();
+const axios = require("axios");
+const fs = require("fs");
 
-## About Me
-I'm a Brazilian developer with a passion for both software development and law. 
-I have a degree in Analysis and Systems Development, and I'm currently pursuing postgraduate studies in Full Stack Development and Artificial Intelligence at Rocketseat.
+const REGION = "us";
+const REALM_SLUG = "azralon";
+const CHAR_NAME = "calltrucko";
 
-## 🚀 Current Endeavors
-I'm currently working as a developer at Creare!
+async function getBlizzardToken() {
+  const clientId = process.env.BLIZZARD_CLIENT_ID;
+  const clientSecret = process.env.BLIZZARD_CLIENT_SECRET;
+  const url = `https://${REGION}.battle.net/oauth/token`;
+  try {
+    const response = await axios.post(url, "grant_type=client_credentials", {
+      auth: { username: clientId, password: clientSecret },
+    });
+    return response.data.access_token;
+  } catch (error) {
+    console.error(
+      "Erro ao obter token da Blizzard:",
+      error.response ? error.response.data : error.message
+    );
+    return null;
+  }
+}
 
+async function getCharacterData(token) {
+  const namespace = `profile-${REGION}`;
+  const characterUrl = `https://${REGION}.api.blizzard.com/profile/wow/character/${REALM_SLUG}/${CHAR_NAME}?namespace=${namespace}&locale=pt_BR`;
+  const mediaUrl = `https://${REGION}.api.blizzard.com/profile/wow/character/${REALM_SLUG}/${CHAR_NAME}/character-media?namespace=${namespace}&locale=pt_BR`;
 
-## 🛠️ Development Languages
-### I have experience coding with:
-<p align="start">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" height="32px" alt="HTML5" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" height="32px" alt="CSS3" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="32px" alt="JavaScript" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="32px" alt="TypeScript" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="32px" alt="react logo"  />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/NestJS.svg" height="32px" alt="nestjs logo"  />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" height="32px" alt="Java" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" height="32px" alt="Kotlin" />
-</p>
+  try {
+    const [characterResponse, mediaResponse] = await Promise.all([
+      axios.get(characterUrl, {
+        headers: { Authorization: `Bearer ${token}` },
+      }),
+      axios.get(mediaUrl, { headers: { Authorization: `Bearer ${token}` } }),
+    ]);
 
+    const charData = characterResponse.data;
+    const mediaData = mediaResponse.data;
 
+    const mainImage = mediaData.assets.find(
+      (asset) => asset.key === "main-raw"
+    );
 
-## 📫 Get in Touch
-<p align="start">
-  You can reach me through these channels:
-  <div> 
+    return {
+      level: charData.level,
+      ilvl: charData.equipped_item_level,
+      guild: charData.guild ? charData.guild.name : "Sem Guilda",
+      spec: charData.active_spec.name,
+      charClass: charData.character_class.name,
+      faction: charData.faction.name,
+      achievements: charData.achievement_points,
+      imageUrl: mainImage ? mainImage.value : null,
+    };
+  } catch (error) {
+    console.error(
+      "error:",
+      error.response ? error.response.data : error.message
+    );
+    return null;
+  }
+}
 
-  <a href="mailto:gabriel.camargoadv@gmail.com">
-    <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-  </a>
-  <a href="https://www.linkedin.com/in/gabriel-camargo-adv/">
-    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-  </a> 
+function updateReadme(characterData) {
+  const readmePath = "./README.md";
+  let readmeContent;
+  try {
+    readmeContent = fs.readFileSync(readmePath, "utf8");
+  } catch (error) {
+    console.error("Error reading README.md:", error);
+    return;
+  }
+
+  const characterMarkdown = `
+## 🎮 currently playing wow
+  <div align="center">
+  <img src="${characterData.imageUrl}" alt="${CHAR_NAME}" width="650px" />
+  <table >
+    <tr>
+      <td><strong>Level:</strong> ${characterData.level}</td>
+      <td><strong>Item Level:</strong> ${characterData.ilvl}</td>
+      <td><strong>Class:</strong> ${characterData.charClass} (${characterData.spec})</td>
+    </tr>
+  </table>
 </div>
-</p>
+`;
 
-<!-- WOW-STATUS-START -->
-(section to be changed)
-<!-- WOW-STATUS-END -->
+  const updatedReadme = readmeContent.replace(
+    /(<!-- WOW-STATUS-START -->)[\s\S]*(<!-- WOW-STATUS-END -->)/,
+    `$1\n${characterMarkdown}\n$2`
+  );
+
+  try {
+    fs.writeFileSync(readmePath, updatedReadme, "utf8");
+    console.log("README updated successfully!");
+  } catch (error) {
+    console.error("Error saving README.md:", error);
+  }
+}
+
+async function main() {
+  const token = await getBlizzardToken();
+  if (token) {
+    const characterData = await getCharacterData(token);
+    if (characterData) {
+      updateReadme(characterData);
+    }
+  }
+}
+
+main();
