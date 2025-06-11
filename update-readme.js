@@ -88,8 +88,8 @@ function updateReadme(characterData) {
 `;
 
   const updatedReadme = readmeContent.replace(
-    /[\s\S]*/,
-    `\n${characterMarkdown}\n`
+    /(<!-- WOW-STATUS-START -->)[\s\S]*(<!-- WOW-STATUS-END -->)/,
+    `$1\n${characterMarkdown}\n$2`
   );
 
   try {

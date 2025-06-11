@@ -37,4 +37,6 @@ I'm currently working as a developer at Creare!
 </div>
 </p>
 
----
+<!-- WOW-STATUS-START -->
+(section to be changed)
+<!-- WOW-STATUS-END -->
