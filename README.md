@@ -45,8 +45,8 @@ I'm currently working as a developer at Creare!
   <table >
     <tr>
       <td><strong>Level:</strong> 80</td>
-      <td><strong>Item Level:</strong> 637</td>
-      <td><strong>Class:</strong> Guerreiro (Proteção)</td>
+      <td><strong>Item Level:</strong> 641</td>
+      <td><strong>Class:</strong> Guerreiro (Fúria)</td>
     </tr>
   </table>
 </div>
